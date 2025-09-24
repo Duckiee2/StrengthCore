@@ -14,13 +14,24 @@ import java.util.List;
 
 public final class Strength extends JavaPlugin {
 
+    private static Strength instance;
+
     @Override
     public void onEnable() {
-        getLogger().info("Strength SMP plugin test version :tm:");
+        if (instance != null) {
+            throw new IllegalStateException("Plugin already initialized!");
+        } else {
+            instance = this;
+            getLogger().info("hi.");
+        }
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        getLogger().info("bye.");
+    }
+
+    public static Strength getInstance() {
+        return instance;
     }
 }
