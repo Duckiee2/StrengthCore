@@ -3,7 +3,3 @@ version: '1.0'
 main: com.catadmirer.strength.Strength
 author: "CatAdmirer"
 api-version: '1.21'
-commands:
-  multistrike:
-    description: Test
-    usage: /multstrike
